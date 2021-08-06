@@ -1,5 +1,9 @@
 package com.springbootPrueba.springbootPrueba.repository;
 
+import com.springbootPrueba.springbootPrueba.model.Precio;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class PrecioRepositorio {
+@Repository
+public interface PrecioRepositorio extends JpaRepository<Precio, Integer>  {
 }

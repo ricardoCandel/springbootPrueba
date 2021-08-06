@@ -6,11 +6,11 @@ import javassist.NotFoundException;
 import java.util.List;
 
 public interface CocheServicio {
-    List<?> findAll();
+    List<Coche> findAll();
 
     Coche findById(int id) throws NotFoundException;
 
-    Coche save(Coche coche);
+    Coche save(Coche coche) throws NotFoundException;
 
     void delete(int id) throws NotFoundException;
 }

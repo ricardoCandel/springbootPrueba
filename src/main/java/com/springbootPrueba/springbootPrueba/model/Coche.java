@@ -23,4 +23,18 @@ public class Coche implements Serializable {
 
     @Column(name = "color")
     private String color;
+
+    @ManyToOne(cascade= { CascadeType.ALL})
+    @JoinColumn(name="marca_id")
+    private Marca marca;
+
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "id=" + id +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", marca=" + marca.getId() +
+                '}';
+    }
 }
